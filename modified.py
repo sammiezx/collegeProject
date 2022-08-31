@@ -37,10 +37,12 @@ def process(sourceDirectory, destinationDirectory):
             if (detect_save(f, destinationDirectory + "/" + str(properCount) + ".pgm") == 1):
                 properCount = properCount + 1
             if (properCount == 11):
-                return
+                return true
+    return false
 
 
 # cv2.imshow("Detected Face", image)
 # cv2.waitKey(0)
 
+# returns true if file is processed succesfully else false
 process("/home/samir/Desktop/Project/ImageDetection/images", "/home/samir/Desktop/Project/ImageDetection/detected")
